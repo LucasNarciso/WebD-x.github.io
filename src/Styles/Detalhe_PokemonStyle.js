@@ -15,10 +15,26 @@ export const DivJanelaVertical = styled.div`
     width: 20em;
     height: 30em;
     background-color: #007EB0;
-    border-radius: 0.2em;
+    border-radius: 0.2em;   
     padding: 1em;
     margin: 2.3em;
     color: white;
+`
+
+export const DivContentWindow = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`
+
+export const ItemMove = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 `
 
 export const DivJanelaHorizontal = styled.div`
@@ -30,6 +46,9 @@ export const DivJanelaHorizontal = styled.div`
 `
 
 export const DivImagemPokemon = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     width: 100%;
     height: 13.5em;

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 //STYLED COMPONENTS
-import {DivPai, GlobalStyle } from "./Styles.js/AppStyle";
+import {DivPai, GlobalStyle } from "./Styles/AppStyle";
 
 //COMPONENTS
 import Home from "./Pages/Home";

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 
 //STYLED COMPONENTS
-import { DivConteudo, DivPag, BotaoPag, ConteudoPag } from "../Styles.js/HomeStyle";
+import { DivConteudo, DivPag, BotaoPag, ConteudoPag } from "../Styles/HomeStyle";
 
 import CardPokemon from "../Components/CardPokemon/CardPokemon";
 
