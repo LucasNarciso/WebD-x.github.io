@@ -35,6 +35,10 @@ export const ItemMove = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    color: black;
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.2em;
 `
 
 export const DivJanelaHorizontal = styled.div`
@@ -64,4 +68,23 @@ export const PartStatus = styled.div`
     height: 3em;
     display: flex;
     flex-direction: column;
+`
+
+export const DivContentTypes = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+
+    P {
+        margin: 0.5em;
+    }
+`
+
+export const ContentTypes = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
