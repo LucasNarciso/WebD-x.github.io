@@ -1,10 +1,28 @@
 {
   "files": {
-    "main.js": "/static/js/main.fba25a64.js",
-    "index.html": "/index.html",
-    "main.fba25a64.js.map": "/static/js/main.fba25a64.js.map"
+    "main.js": "/WebDex.github.io/static/js/main.905ae2ab.js",
+    "static/media/ice.svg": "/WebDex.github.io/static/media/ice.66ae7ea08c7f5727d7bfa1a8f022b4d9.svg",
+    "static/media/bug.svg": "/WebDex.github.io/static/media/bug.14690de9ba880dcc267a5b12abcfe209.svg",
+    "static/media/fire.svg": "/WebDex.github.io/static/media/fire.f1db444dc0af923b375ad5d9a35945b2.svg",
+    "static/media/fighting.svg": "/WebDex.github.io/static/media/fighting.62d0ce9f80a7d4d63a74892f24cac61e.svg",
+    "static/media/poison.svg": "/WebDex.github.io/static/media/poison.db23e19da233ee2352fc2fba04343ebe.svg",
+    "static/media/ground.svg": "/WebDex.github.io/static/media/ground.4482f0b9bf629c6eebfe10c71ed95adf.svg",
+    "static/media/steel.svg": "/WebDex.github.io/static/media/steel.34bdc4f044f14e02e30f20c0620f33b4.svg",
+    "static/media/ghost.svg": "/WebDex.github.io/static/media/ghost.59e1a06ef0016994db0e03d214ffe11f.svg",
+    "static/media/rock.svg": "/WebDex.github.io/static/media/rock.3a096029ecaee871cb43a77880141139.svg",
+    "static/media/psychic.svg": "/WebDex.github.io/static/media/psychic.ae436351a078c9617af6e8e60c0a8980.svg",
+    "static/media/fairy.svg": "/WebDex.github.io/static/media/fairy.917b8aebec8f8a5598c60025e50f4662.svg",
+    "static/media/dark.svg": "/WebDex.github.io/static/media/dark.727d0b9da1d8f4db57d42e108d0741a8.svg",
+    "static/media/water.svg": "/WebDex.github.io/static/media/water.94326028adb2291464b650bc1cda1d94.svg",
+    "static/media/flying.svg": "/WebDex.github.io/static/media/flying.c9a0d167bdbab75a72d3ed0dc1a067b7.svg",
+    "static/media/dragon.svg": "/WebDex.github.io/static/media/dragon.10af99cc311c1e247aa9e8152b88602f.svg",
+    "static/media/grass.svg": "/WebDex.github.io/static/media/grass.d998796a3bcf5bb5c3bea339d3b93598.svg",
+    "static/media/electric.svg": "/WebDex.github.io/static/media/electric.0e828af6b612cdec3cd3a4d667f63fa2.svg",
+    "static/media/normal.svg": "/WebDex.github.io/static/media/normal.280e4d244f120be6c25739ef4a9062fa.svg",
+    "index.html": "/WebDex.github.io/index.html",
+    "main.905ae2ab.js.map": "/WebDex.github.io/static/js/main.905ae2ab.js.map"
   },
   "entrypoints": [
-    "static/js/main.fba25a64.js"
+    "static/js/main.905ae2ab.js"
   ]
 }
