@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import Pokedex from "./Pages/Pokedex";
 import Detalhe_Pokemon from "./Pages/Detalhe_Pokemon";
 import NavBar from "./Components/NavBar/NavBar";
+import Contatos from "./Components/Contatos/Contatos";
 
 function App() {
 
@@ -66,6 +67,7 @@ function App() {
       <GlobalStyle />
       {navBar}
       {page}
+      <Contatos></Contatos>
     </DivPai>
   );
 }
