@@ -5,7 +5,7 @@ display: flex;
 justify-content: center;
 width: 100%;
 height: 2em;
-margin-bottom: 1em;
+margin-bottom: 3em;
 `
 
 export const ConteudoPag = styled.div`
