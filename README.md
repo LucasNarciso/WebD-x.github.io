@@ -7,8 +7,8 @@
 ## 📑 Descrição
 <h4> Esse é um projeto da faculdade onde eu utilizo a PokéApi para creiar uma Pokédex. </h4>
 
-![image](https://user-images.githubusercontent.com/71471494/168901003-9d322b52-5fc5-4b39-b481-e339003313fc.png)
-![image](https://user-images.githubusercontent.com/71471494/168905100-ae885da5-8466-4d33-9260-4b506906f909.png)
+![image](https://user-images.githubusercontent.com/71471494/171211372-9ae645b8-b009-447f-9f1a-942e6b2decb9.png)
+![image](https://user-images.githubusercontent.com/71471494/171211486-6d65f194-5252-4fdb-91d8-6c565a264aa6.png)
 
 
 <br>
@@ -40,4 +40,4 @@
 <br>
 [<img src="https://avatars.githubusercontent.com/u/20658825?s=200&v=4" width="25em">](https://styled-components.com/) Styled Components
 <br>
-[<img src="" width="25em">](https://pokeapi.co) PokéApi - The RESTful Pokémon API
+[<img src="https://user-images.githubusercontent.com/71471494/171213514-62b0c0fe-a07b-485c-9810-b7771349cded.png" width="25em">](https://pokeapi.co) PokéApi - The RESTful Pokémon API
