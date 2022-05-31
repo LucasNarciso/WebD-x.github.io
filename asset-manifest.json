@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/WebDex.github.io/static/js/main.905ae2ab.js",
+    "main.js": "/WebDex.github.io/static/js/main.0c944317.js",
     "static/media/ice.svg": "/WebDex.github.io/static/media/ice.66ae7ea08c7f5727d7bfa1a8f022b4d9.svg",
     "static/media/bug.svg": "/WebDex.github.io/static/media/bug.14690de9ba880dcc267a5b12abcfe209.svg",
     "static/media/fire.svg": "/WebDex.github.io/static/media/fire.f1db444dc0af923b375ad5d9a35945b2.svg",
@@ -20,9 +20,9 @@
     "static/media/electric.svg": "/WebDex.github.io/static/media/electric.0e828af6b612cdec3cd3a4d667f63fa2.svg",
     "static/media/normal.svg": "/WebDex.github.io/static/media/normal.280e4d244f120be6c25739ef4a9062fa.svg",
     "index.html": "/WebDex.github.io/index.html",
-    "main.905ae2ab.js.map": "/WebDex.github.io/static/js/main.905ae2ab.js.map"
+    "main.0c944317.js.map": "/WebDex.github.io/static/js/main.0c944317.js.map"
   },
   "entrypoints": [
-    "static/js/main.905ae2ab.js"
+    "static/js/main.0c944317.js"
   ]
 }
