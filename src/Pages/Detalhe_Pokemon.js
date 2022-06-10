@@ -1,7 +1,8 @@
+//REACT
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-//IMAGENS
+//ICONES DOS TIPOS
 import bug from "../Assets/img/Icones_Tipos/bug.svg"
 import dark from "../Assets/img/Icones_Tipos/dark.svg"
 import dragon from "../Assets/img/Icones_Tipos/dragon.svg"
@@ -21,32 +22,45 @@ import rock from "../Assets/img/Icones_Tipos/rock.svg"
 import steel from "../Assets/img/Icones_Tipos/steel.svg"
 import water from "../Assets/img/Icones_Tipos/water.svg"
 
+//STYLED COMPONENTES
+import { ContentTypes, DivContentTypes, DivContentWindow, DivConteudo, DivImagemPokemon, DivJanelaHorizontal, DivJanelaVertical, GlobalStyle, ItemMove, PartStatus, Titulo } from "../Styles/Detalhe_PokemonStyle";
 
-import { ContentTypes, DivContentTypes, DivContentWindow, DivConteudo, DivImagemPokemon, DivJanelaHorizontal, DivJanelaVertical, ItemMove, PartStatus, Titulo } from "../Styles/Detalhe_PokemonStyle";
-
-
+//COMPONENTES
 import BarraDeProgressoStatus from "../Components/BarraDeProgressoStatus/BarraDeProgressoStatus";
+import NavBar from "../Components/NavBar/NavBar";
+import Contatos from "../Components/Contatos/Contatos";
 
+//ROUTES
+import { useNavigate, useParams } from "react-router-dom";
+import { goBack } from "../Routes/Coordinator";
 
-function Detalhe_Pokemon(props) {
+//CONSTANTES
+import { baseURL } from "../Constants/Consts";
+
+function Detalhe_Pokemon() {
 
     const [Data, setData] = useState([]);
+    const [Status, setStatus] = useState([]);
     const [Sprites, setSprites] = useState({});
     const [Moves, setMoves] = useState([]);
     const [Types, setTypes] = useState([]);
+    const navigate = useNavigate()
+    const parametros = useParams()
 
     useEffect(() => {
         getDados();
     }, [])
 
     const getDados = () => {
-        axios.get(props.pokemon, {
+
+        axios.get(baseURL + 'pokemon/' + parametros.Id, {
             headers: {
             "Content-Type": "application/json"
             }
         }).then((resposta) =>{
 
-            setData(resposta.data.stats)
+            setData(resposta.data)
+            setStatus(resposta.data.stats)
             setSprites(resposta.data.sprites)
             setMoves(resposta.data.moves)
             setTypes(resposta.data.types)
@@ -56,7 +70,7 @@ function Detalhe_Pokemon(props) {
         })
     }
 
-    const renderStatus = Data.map((status) => {
+    const renderStatus = Status.map((status) => {
 
         return(
             <PartStatus>
@@ -145,7 +159,8 @@ function Detalhe_Pokemon(props) {
 
     return(
         <DivConteudo>
-
+            <GlobalStyle/>
+            <NavBar titulo={Data.name} onClickBotao1={() => {goBack(navigate)}} botao1={"VOLTAR"} botao2={true}></NavBar>
             <DivJanelaVertical>
                 <DivImagemPokemon><img width={'120em'} src={Sprites.front_default}/></DivImagemPokemon>
                 <DivImagemPokemon><img width={'120em'} src={Sprites.back_default}/></DivImagemPokemon>
@@ -170,6 +185,7 @@ function Detalhe_Pokemon(props) {
                     {renderTypes}
                 </DivContentTypes>
             </DivJanelaHorizontal>
+            <Contatos/>
         </DivConteudo>
     )
 }

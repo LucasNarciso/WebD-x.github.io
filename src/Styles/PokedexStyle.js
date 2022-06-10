@@ -1,4 +1,4 @@
-import styled, {createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 //Estilização global do site, retirando definições padrões
 export const GlobalStyle = createGlobalStyle`
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar {
         width: 0.50em;
         height: 0.5em;
-        background-color: white;
+        background-color: transparent;
     }
 
     /*Personaliza a Barra de Rolagem*/
@@ -24,7 +24,6 @@ export const GlobalStyle = createGlobalStyle`
         background: #E84A2A;
     }
 `
-
 //Estilo da dive contendo todo o conteúdo da página home
 export const DivConteudo = styled.div`
     display: flex;
