@@ -4,7 +4,9 @@ export const DivModal = styled.div`
     position: absolute;
     width: 50em;
     height: 10em;
-    background-color: white;
+    background-color: #007EB0;
+    border-radius: 0.2em;
+    color: white;
     margin-top: 15%;
     display: flex;
     flex-direction: column;

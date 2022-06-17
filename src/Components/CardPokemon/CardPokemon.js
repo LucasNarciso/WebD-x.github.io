@@ -66,18 +66,20 @@ function CardPokemon(props) {
 
     //Função do onclick do botão
     const botaoPokemon = () => {
-
-        if (nomeBotao === "ADICIONAR") {
-            adicionaPokemon(Id);
-            trocaBotao();
-        }else{
-            removePokemon(Id);
-            trocaBotao();
-            if (props.removePoke) {
-                props.removePoke(Id)
+        if (JSON.parse(localStorage.getItem("pokédex")).length < 20) {
+            if (nomeBotao === "ADICIONAR") {
+                adicionaPokemon(Id);
+                trocaBotao();
+            }else{
+                removePokemon(Id);
+                trocaBotao();
+                if (props.removePoke) {
+                    props.removePoke(Id)
+                }
             }
+        }else{
+            alert("Sua pokédex está lotada! Máximo de 20 pokémons.")
         }
-    
     }
 
     //Verifica se o pokémon ja está na pokédex
