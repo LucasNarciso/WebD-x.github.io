@@ -59,6 +59,7 @@ function BarraPag (props) {
 
         }
         setPagination([antes, <NumeroPaginaEscolhido>{paginaAtual}</NumeroPaginaEscolhido>, depois]);
+        console.log(pagination)
     }
 
     //Atualiza o número das páginas a cada troca de página

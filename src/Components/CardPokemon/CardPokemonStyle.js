@@ -5,6 +5,15 @@ export const DivCardPokemon = styled.div`
     background-color: #007EB0;
     margin: 2em;
     border-radius: 0.2em;
+    border: 0.2em solid transparent;
+`
+
+//Estilização da Div principal dos Cards
+export const DivCardPokemonSelected = styled.div`
+    background-color: #007EB0;
+    margin: 2em;
+    border-radius: 0.2em;
+    border: 0.2em solid black;
 `
 
 //Div que contém a foto dos pokémons nos Cards
@@ -41,4 +50,8 @@ export const BotaoCard = styled.button`
 export const DivBotoesCard = styled.div`
     display: flex;
     justify-content: space-evenly;
+`
+
+export const DivImgPokeball = styled.div`
+    padding: 2em;
 `

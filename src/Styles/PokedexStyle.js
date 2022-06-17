@@ -30,3 +30,9 @@ export const DivConteudo = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
 `
+
+export const MensagemPokVazia = styled.p`
+    margin: 2em;
+    color: white;
+    font-size: 1.1em;
+`

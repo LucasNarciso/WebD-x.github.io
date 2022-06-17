@@ -7,15 +7,21 @@ import { useNavigate } from "react-router-dom";
 import { goToDetailPage } from "../../Routes/Coordinator";
 
 //STYLED COMPONENTES
-import { DivCardPokemon, BotaoCard, DivInternaCard, DivBotoesCard } from "./CardPokemonStyle";
+import { DivCardPokemon, BotaoCard, DivInternaCard, DivBotoesCard, DivImgPokeball, DivCardPokemonSelected } from "./CardPokemonStyle";
+
+//ASSETS
+import Pokeball_Loading from "../../Assets/gif/Pokeball_Loading.gif"
+import Pokeball from "../../Assets/img/Pokeball.svg"
 
 function CardPokemon(props) {
 
-    const [Imagen, setImagen] = useState("");
+    const [Imagem, setImagem] = useState("");
     const [Id, setId] = useState("");
     const [data, setData] = useState({});
     const navigate = useNavigate();
     const [nomeBotao, setNomeBotao] = useState("");
+    const [Carregando, setCarregando] = useState(true);
+    const [Selected, setSelected] = useState(false);
 
     useEffect(() => {
         getDados();
@@ -27,20 +33,25 @@ function CardPokemon(props) {
     }, [Id])
 
     //Requisição da API
-    const getDados = () => {
-        axios.get("https://pokeapi.co/api/v2/pokemon/" + props.url, {
-            headers: {
-            "Content-Type": "application/json"
-            }
-        }).then((resposta) =>{
+    const getDados = async () => {
+        setCarregando(true)
+        try {
+            const resposta = await axios.get("https://pokeapi.co/api/v2/pokemon/" + props.url, {
+                headers: {
+                    "Content-Type": "application/json"
+                }
 
-            setImagen(resposta.data.sprites.front_default)
+            })
+            setCarregando(false)
+            setImagem(resposta.data.sprites.front_default)
             setId(resposta.data.id)
             setData(resposta.data)
 
-        }).catch((err) => {
+        } catch (err) {
+            setCarregando(false)
             console.log(err.menssage)
-        })
+        }
+        
     }
 
     //Função que altera o nome dos botões
@@ -62,6 +73,9 @@ function CardPokemon(props) {
         }else{
             removePokemon(Id);
             trocaBotao();
+            if (props.removePoke) {
+                props.removePoke(Id)
+            }
         }
     
     }
@@ -103,18 +117,47 @@ function CardPokemon(props) {
         
     }
 
-    return(
-        <DivCardPokemon>
-            <DivInternaCard>
-                <p>{data.name && data.name.toUpperCase()}</p>
-                <img width={'120em'} src={Imagen} alt={"Imagen do pokémon " + data.name}></img>
-            </DivInternaCard>
-            <DivBotoesCard>
-                <BotaoCard onClick={() => {botaoPokemon()}}>{nomeBotao}</BotaoCard>
-                <BotaoCard onClick={() => {goToDetailPage(navigate, Id)}}>DETALHES</BotaoCard>
-            </DivBotoesCard>
-        </DivCardPokemon>
-    )
+    //Função que troca o card caso ele seja selecionado
+    const selecionaCard = (func) => {
+        if (props.selecionados) {
+            if (func === "selecionar" && (props.selecionados[0] === 0 || props.selecionados[1] === 0)) {
+                setSelected(true)
+            }else{
+                setSelected(false)
+            }
+        }
+        
+
+        props.func(Id);
+    }
+
+    if (Selected) {
+        return(
+            <DivCardPokemonSelected>
+                <DivInternaCard onClick={() => {selecionaCard("remover")}} >
+                    <p>{data.name && data.name.toUpperCase()}</p>
+                    <img width={'120em'} src={Carregando ? Pokeball_Loading : Imagem === null ? Pokeball : Imagem} alt={Carregando ? "" : "Imagem do pokémon " + data.name}></img>
+                </DivInternaCard>
+                <DivBotoesCard>
+                    <BotaoCard onClick={() => {botaoPokemon()}}>{Carregando ? "" : nomeBotao}</BotaoCard>
+                    <BotaoCard onClick={() => {goToDetailPage(navigate, Id)}}>DETALHES</BotaoCard>
+                </DivBotoesCard>
+            </DivCardPokemonSelected>
+        )
+    }else{
+        return(
+            <DivCardPokemon>
+                <DivInternaCard onClick={() => {selecionaCard("selecionar")}} >
+                    <p>{data.name && data.name.toUpperCase()}</p>
+                    <img width={'120em'} src={Carregando ? Pokeball_Loading : Imagem === null ? Pokeball : Imagem} alt={Carregando ? "" : "Imagem do pokémon " + data.name}></img>
+                </DivInternaCard>
+                <DivBotoesCard>
+                    <BotaoCard onClick={() => {botaoPokemon()}}>{Carregando ? "" : nomeBotao}</BotaoCard>
+                    <BotaoCard onClick={() => {goToDetailPage(navigate, Id)}}>{Carregando ? "" : "DETALHES"}</BotaoCard>
+                </DivBotoesCard>
+            </DivCardPokemon>
+        )
+    }
 
 }
 

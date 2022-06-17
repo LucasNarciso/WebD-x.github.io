@@ -48,7 +48,7 @@ function Home(props) {
             console.log(err.menssage)
         })
     }
-    
+
     //Função que verifica se o Local Storage possui a variável necessária, caso não tenha ela é criada.
     const atualizaLocalStorage = () => {
         if (localStorage.getItem("pokédex") === null) {
