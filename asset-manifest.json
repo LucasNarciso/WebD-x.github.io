@@ -1,6 +1,7 @@
 {
   "files": {
-    "main.js": "/WebDex.github.io/static/js/main.f4db2eb9.js",
+    "main.js": "/WebDex.github.io/static/js/main.05914c18.js",
+    "static/media/Pokeball_Loading.gif": "/WebDex.github.io/static/media/Pokeball_Loading.c74ad783bd14cfbe6217.gif",
     "static/media/ice.svg": "/WebDex.github.io/static/media/ice.66ae7ea08c7f5727d7bfa1a8f022b4d9.svg",
     "static/media/bug.svg": "/WebDex.github.io/static/media/bug.14690de9ba880dcc267a5b12abcfe209.svg",
     "static/media/fire.svg": "/WebDex.github.io/static/media/fire.f1db444dc0af923b375ad5d9a35945b2.svg",
@@ -16,13 +17,14 @@
     "static/media/water.svg": "/WebDex.github.io/static/media/water.94326028adb2291464b650bc1cda1d94.svg",
     "static/media/flying.svg": "/WebDex.github.io/static/media/flying.c9a0d167bdbab75a72d3ed0dc1a067b7.svg",
     "static/media/dragon.svg": "/WebDex.github.io/static/media/dragon.10af99cc311c1e247aa9e8152b88602f.svg",
+    "static/media/Pokeball.svg": "/WebDex.github.io/static/media/Pokeball.fd2a88cd4bb7a0cf415a5eb32d404aae.svg",
     "static/media/grass.svg": "/WebDex.github.io/static/media/grass.d998796a3bcf5bb5c3bea339d3b93598.svg",
     "static/media/electric.svg": "/WebDex.github.io/static/media/electric.0e828af6b612cdec3cd3a4d667f63fa2.svg",
     "static/media/normal.svg": "/WebDex.github.io/static/media/normal.280e4d244f120be6c25739ef4a9062fa.svg",
     "index.html": "/WebDex.github.io/index.html",
-    "main.f4db2eb9.js.map": "/WebDex.github.io/static/js/main.f4db2eb9.js.map"
+    "main.05914c18.js.map": "/WebDex.github.io/static/js/main.05914c18.js.map"
   },
   "entrypoints": [
-    "static/js/main.f4db2eb9.js"
+    "static/js/main.05914c18.js"
   ]
 }
