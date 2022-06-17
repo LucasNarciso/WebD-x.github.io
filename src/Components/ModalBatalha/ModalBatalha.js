@@ -28,7 +28,7 @@ function ModalBatalha (props) {
     }, [dataPoke1, dataPoke2])
 
     const defineMensagem = () => {
-        if ((pokemons[0] + pokemons[1]) === 0 || (pokemons[0] + pokemons[1]) === 1) {
+        if (pokemons[0] === 0 || pokemons[1] === 0) {
             setMensagem(true)
         }else{
             setMensagem(false)
@@ -82,10 +82,12 @@ function ModalBatalha (props) {
 
     return(
         <DivModal>
-            <p>{nome1} VS {nome2}</p>
-            <p>VENCEDOR:</p>
-            <p>{resultBatalha && resultBatalha}</p>
-            <p>{mensagem ? "Você precisa selecionar dois pokémons para que possa haver uma batalha" : ""}</p>
+            {mensagem ? "" : <p> {(nome1 + " vs " + nome2).toUpperCase()}</p>}
+            {mensagem ? "" : <p> VENCEDOR: </p>}
+            {mensagem ? "" : <p> ----------------------------- </p>}
+            {mensagem ? "" : <p>{(resultBatalha && resultBatalha).toUpperCase()}</p>}
+            {mensagem ? "" : <p> ----------------------------- </p>}
+            {mensagem ? <p>Você precisa selecionar dois pokémons para que possa haver uma batalha</p> : ""}
             <BotaoFechar onClick={() => {props.funcRetirarModal()}}>FECHAR</BotaoFechar>
             
         </DivModal>

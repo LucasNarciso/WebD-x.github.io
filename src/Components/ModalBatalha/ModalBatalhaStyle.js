@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DivModal = styled.div`
     position: absolute;
     width: 50em;
-    height: 10em;
+    height: 12em;
     background-color: #007EB0;
     border-radius: 0.2em;
     color: white;
@@ -12,6 +12,7 @@ export const DivModal = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 1.2em;
 `
 
 export const BotaoFechar = styled.button`
