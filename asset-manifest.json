@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/WebDex.github.io/static/js/main.2f0ee1fa.js",
+    "main.js": "/WebDex.github.io/static/js/main.1c50c424.js",
     "static/media/Pokeball_Loading.gif": "/WebDex.github.io/static/media/Pokeball_Loading.c74ad783bd14cfbe6217.gif",
     "static/media/ice.svg": "/WebDex.github.io/static/media/ice.66ae7ea08c7f5727d7bfa1a8f022b4d9.svg",
     "static/media/bug.svg": "/WebDex.github.io/static/media/bug.14690de9ba880dcc267a5b12abcfe209.svg",
@@ -22,9 +22,9 @@
     "static/media/electric.svg": "/WebDex.github.io/static/media/electric.0e828af6b612cdec3cd3a4d667f63fa2.svg",
     "static/media/normal.svg": "/WebDex.github.io/static/media/normal.280e4d244f120be6c25739ef4a9062fa.svg",
     "index.html": "/WebDex.github.io/index.html",
-    "main.2f0ee1fa.js.map": "/WebDex.github.io/static/js/main.2f0ee1fa.js.map"
+    "main.1c50c424.js.map": "/WebDex.github.io/static/js/main.1c50c424.js.map"
   },
   "entrypoints": [
-    "static/js/main.2f0ee1fa.js"
+    "static/js/main.1c50c424.js"
   ]
 }
