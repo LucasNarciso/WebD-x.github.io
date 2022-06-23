@@ -1,14 +1,14 @@
 
 export const goToPokedexPage = (navigate) => {
-    navigate(`pokedex`)
+    navigate(`/pokedex`)
 }
 
 export const goToDetailPage = (navigate, id) => {
-    navigate(`/WebDex.github.io/detalhes/${id}`)
+    navigate(`/detalhes/${id}`)
 }
 
 export const goToHomePage = (navigate) => {
-    navigate("WebDex.github.io/")
+    navigate("/")
 }
 
 export const goBack = (navigate) => {
