@@ -24,7 +24,6 @@ function Pokedex() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log(selectBattle)
         setPokemons(JSON.parse(localStorage.getItem("pokédex")));
     }, [])
 
@@ -38,7 +37,6 @@ function Pokedex() {
         }else if(selectBattle[1] === id) {
             selectBattle[1] = 0
         }
-        console.log(selectBattle)
     }
     
     const removePokemon = (id) => {

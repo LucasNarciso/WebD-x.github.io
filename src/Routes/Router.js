@@ -1,5 +1,5 @@
 //REACT
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 //PÁGINAS
 import Detalhe_Pokemon from "../Pages/Detalhe_Pokemon";
@@ -9,13 +9,13 @@ import Erro from "../Pages/Erro";
 
 export const Router = () => {
     return(
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route index path={"WebDex.github.io/"} element={<Home/>}/>
                 <Route path={"WebDex.github.io/pokedex/"} element={<Pokedex/>}/>
                 <Route path={"WebDex.github.io/detalhes/:Id"} element={<Detalhe_Pokemon/>}/>
                 <Route path={"*"} element={<Erro/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
