@@ -11,7 +11,7 @@ export const Router = () => {
     return(
         <HashRouter>
             <Routes>
-                <Route index path={"WebDex.github.io/"} element={<Home/>}/>
+                <Route index path={"/"} element={<Home/>}/>
                 <Route path={"WebDex.github.io/pokedex/"} element={<Pokedex/>}/>
                 <Route path={"WebDex.github.io/detalhes/:Id"} element={<Detalhe_Pokemon/>}/>
                 <Route path={"*"} element={<Erro/>}/>
